@@ -7,6 +7,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { AppProvide } from "./utils/context";
 import "react-toastify/dist/ReactToastify.css";
 import "./styles/index.scss";
+
 const theme = createTheme(Theme);
 function App() {
   return (

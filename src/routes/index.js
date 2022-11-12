@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./private-route";
 import { Login } from "../components/login";
-
+import Attendance from "../components/attendance";
 const AppRoutes = () => {
-  const [reloadPendingApprovals, setReloadPendingApprovals] = useState(false);
   return (
     <div>
       <Router>
@@ -15,10 +14,10 @@ const AppRoutes = () => {
             path="/"
             element={
               <PrivateRoute
-
               />
             }
           >
+            <Route exact path="/" element={<Attendance />}></Route>
 
           </Route>
         </Routes>

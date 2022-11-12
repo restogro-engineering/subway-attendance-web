@@ -10,10 +10,7 @@ import Header from "../core/header";
 
 const MainContainer = ({
   children,
-  reloadPendingApprovals,
-  setReloadPendingApprovals,
 }) => {
-  const [showSideMenu, changeviewSettingsForSideMenu] = useState(true);
   const [open, setOpen] = useState(window.innerWidth > 480);
   const MyMenuIcon = styled(open ? MenuOpenIcon : MenuIcon)({
     color: "white",
@@ -24,8 +21,6 @@ const MainContainer = ({
       <div className="main-container">
         <div className="main-right-container">
           <Header
-            reloadPendingApprovals={reloadPendingApprovals}
-            setReloadPendingApprovals={setReloadPendingApprovals}
           />
           <div className="content-div">
             <div>{children}</div>

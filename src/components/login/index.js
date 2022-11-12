@@ -16,9 +16,6 @@ export const Login = () => {
     const user = getOfflineData("user")
     if (user) {
       let navigateToRoute = "/";
-      if (user && user.role === userTypes.user) {
-        navigateToRoute = "/approval";
-      }
       navigate(navigateToRoute);
     }
   }, [navigate]);
